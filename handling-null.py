@@ -27,3 +27,28 @@ df.na.fill(value=0,subset=["column_name"]).show()
 
 🎯 Replace NULL/None values with an empty string
 df.na.fill("").show()
+
+###################################################################################
+#Identify rows with null values
+null_rows = df.filter(df.column_name.isNull())
+null_rows.show()
+
+#Identify rows without null values
+non_null_rows = df.filter(df.column_name.isNotNull())
+non_null_rows.show()
+
+
+#Replace the "column_name" with your particular column name.
+
+----------------------------------------------
+# Find count for empty, None, Null, Nan with string literals.
+
+df2 = df.select([count(when(col(c).contains('None') | \
+              col(c).contains('NULL') | \
+              (col(c) == '' ) | \
+              col(c).isNull() | \
+              isnan(c), c 
+              )).alias(c)
+          for c in df.columns])
+df2.show()
+
