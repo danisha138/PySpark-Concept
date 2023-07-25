@@ -29,7 +29,7 @@ df_with_alias.show()
 
 In this example, we use the 'alias()' function to rename the "age" column to "years_old" in the DataFrame 'df_with_alias'. 
 The DataFrame will now display the new column name "years_old" for the "age" values.
-######################################################################################################################
+#####################################################################################################################
 #Cast Function
 #The Cast function is used to convert a DataFrame column to a different data type. This is useful when the column needs to be in a specific format for data manipulation or analysis.
 
