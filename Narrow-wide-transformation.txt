@@ -1,0 +1,37 @@
+How "Narrow and Wide Transformations" can be explained in step by step manner
+
+Interviewer: Can you explain the concept of narrow and wide transformations in Spark?
+
+Interviewee: Yes! In Spark, transformations are
+
+operations that create a new RDD from an existing one. These transformations can be categorized into two types:
+
+narrow transformations and wide transformations.
+
+Interviewer: Can you tell me the difference between narrow and wide transformations?
+
+Interviewee: Yes! Narrow transformations are operations where each input partition contributes to only one output partition.
+This means that each partition of the resulting RDD depends on a single partition of the parent RDD. Examples of narrow transformations include map, filter, and flatMap.
+
+Interviewer: What about wide transformations? Interviewee: Wide transformations, on the other hand, are operations where each input partition contributes to multiple output partitions.
+This means that multiple partitions of the resulting RDD depend on multiple partitions of the parent RDD. Examples of wide transformations include groupByKey, reduceByKey, and join.
+
+Interviewee: Leveraging narrow transformations is beneficial as they allow Spark to perform operations in parallel, as each partition can be processed independently. This enables better scalability and faster execution of tasks.
+
+For instance, if we have a large dataset and use a map operation, Spark can divide the dataset into multiple partitions and process them simultaneously on different executor nodes, which improves the performance.
+
+Interviewer: What about wide transformations?
+
+Interviewee: Wide transformations involve shuffling and data movement across partitions, which can be more resource-intensive and time-consuming. Therefore, it's essential to use wide transformations judiciously, especially when working with large datasets. For instance, if we need to perform a reduceByKey
+
+operation, it involves shuffling data to group and
+
+aggregate the data by keys. This can be computationally
+
+expensive, especially if the data is not properly partitioned.
+
+Interviewer: How you optimized a Spark application by using narrow and wide transformations?
+
+Interviewee: Yes! In my projects, we process a massive log dataset to extract specific information. We used narrow transformations like map and filter first to perform initial data filtering and transformation on each partition efficiently.
+
+Once we reduced the data size, we strategically used wide transformations like groupBy and join on smaller datasets, ensuring the shuffle operations were minimized. This approach improved the performance and reduced the overall execution time of the job.
