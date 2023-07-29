@@ -39,14 +39,6 @@ df_with_increased_salary = spark.createDataFrame(mapped_rdd, schema)
 
 df_with_increased_salary.display()
 
-
-flattened_rdd = rdd.flatMap(lambda row: [row, row])
-flattened_rdd.collect()
-df_duplicated = spark.createDataFrame(flattened_rdd, schema)
-df_duplicated.show()
-
-
-
 ------------------------------------------------
 #The 'flatMap' function is similar to 'map',but it allows returning multiple elements for each input element. 
 It flattens the results into a single output RDD or DataFrame. 
