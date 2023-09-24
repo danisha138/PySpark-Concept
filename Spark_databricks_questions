@@ -101,3 +101,29 @@ spark.sql("select * from Customer").show()
 
 TEMPORARY views are session-scoped and is dropped when session ends 
 because it skips persisting the definition in the underlying metastore, if any
+
+
+Q17. How to create global views?
+Ans: Use function createOrReplaceGlobalTempView("view_name") on dataframe.
+
+Example of createOrReplaceGlobalTempView(Customer)
+spark.sql("select from global temp Customer").show()
+
+GLOBAL TEMPORARY views are tied to a system preserved temporary schema global_temp.
+
+This feature is useful when you want to share data among different session
+and keep alive until your application ends.
+
+
+Q19. What are the magic commands in Databricks? When to use?
+
+There are multiple magic commands.
+
+%python, %scala, %r, %sql: You can put this as the first line in the cell to run that in a specific language irrespective of the notebook type.
+
+%sh, %fs: You can use to run the shell command or the file system
+command within the specific cell.
+
+%md: To convert specific cell as markdown cell. To add the static text content.
+
+%run: To run the one notebook from inside the other notebook.
