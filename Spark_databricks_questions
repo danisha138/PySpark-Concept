@@ -136,3 +136,16 @@ Example could be to define helper functions in one notebook that are used by oth
 %run must be in a cell by itself, because it runs the entire notebook inline.
 
 %run ./ChildNotebook
+
+
+Q24. What are the different types of clusters there in Databricks.
+
+Interactive Cluster
+1.Used to run interactive queries
+2.Used for development environment
+3.Manually need to start stop cluster
+
+Job Cluster
+1.Use to execute the jobs autmatically
+2.Used for Production environment
+3.Automatically get started and stop with job
