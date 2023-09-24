@@ -116,7 +116,6 @@ and keep alive until your application ends.
 
 
 Q19. What are the magic commands in Databricks? When to use?
-
 There are multiple magic commands.
 
 %python, %scala, %r, %sql: You can put this as the first line in the cell to run that in a specific language irrespective of the notebook type.
