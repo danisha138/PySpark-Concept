@@ -148,4 +148,26 @@ Interactive Cluster
 Job Cluster
 1.Use to execute the jobs autmatically
 2.Used for Production environment
-3.Automatically get started and stop with job
+3.Automatically get started and stop with job.
+
+
+Q25. What are the different Cluster mode in Databricks
+Ans: Databricks supports three cluster modes: Standard, High Concurrency, and Single Node. The default cluster mode is Standard.
+
+Standard clusters:
+A Standard cluster is recommended for a single user, 
+Standard clusters can run workloads developed in any language: Python, SQL, R, and Scala.
+
+High Concurrency clusters:
+A High Concurrency cluster is a managed cloud resource. 
+It provide fine- grained sharing for maximum resource utilization and minimum query latencies.
+
+The performance and security of High Concurrency clusters is provided
+by running user code in separate processes.
+
+In addition, only High Concurrency clusters support table access control.
+
+
+Single Node clusters:
+A Single Node cluster has no workers and runs Spark jobs on the driver node.
+In contrast, a Standard cluster requires at least one Spark worker node in addition to the driver node to execute Spark jobs.
