@@ -67,3 +67,11 @@ df = spark. read. load ("/FileStore/tables/Order.csv", format="csv" header-True,
 df.printSchema()
 
 df.schema
+
+
+
+Define schema Declaratively
+
+orderSchema Region String,Country String,ItemType String, SalesChannel String OrderPriority String,Order ID Integer itssald tager ,UnitCost Double TotalRevenue Double,TotalCost Double, TotalProfit Double
+df= spark.read. load("/FileStore/tables/Order.csv", format="csv", header True, schema-orderschena)
+df.printSchema()
