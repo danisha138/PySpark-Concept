@@ -8,3 +8,12 @@ true while reading the data.
 It can slowdown the loading if data size is too large.
 It is preferrable to define schema instead to avoid any surprises.
 This could be beneficial if you are input data schema is dynamic and keep on changing.
+
+
+Q11. What is the need for broadcast variables in Spark?
+
+Broadcast variables allow the programmer to keep a read-only variable cached on each machine rather than shipping a copy of it with tasks.
+
+They can be used to give every node a copy of a large input dataset in an efficient manner.
+
+Spark distributes broadcast variables using efficient broadcast algorithms to reduce communication costs.
