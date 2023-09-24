@@ -1,0 +1,10 @@
+
+
+Q10. What would inferSchema do while reading a file?
+inferSchema scan the input file and assign the schema to data frame.
+By default inferSchema is false, you can enforce it by setting it
+true while reading the data.
+
+It can slowdown the loading if data size is too large.
+It is preferrable to define schema instead to avoid any surprises.
+This could be beneficial if you are input data schema is dynamic and keep on changing.
