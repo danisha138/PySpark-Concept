@@ -75,3 +75,15 @@ Define schema Declaratively
 orderSchema Region String,Country String,ItemType String, SalesChannel String OrderPriority String,Order ID Integer itssald tager ,UnitCost Double TotalRevenue Double,TotalCost Double, TotalProfit Double
 df= spark.read. load("/FileStore/tables/Order.csv", format="csv", header True, schema-orderschena)
 df.printSchema()
+
+
+
+Q15. What is Spark SQL?
+
+Ans: Spark SQL is a Spark module for structured data processing
+
+It provides abstraction called CataFrames and can also act as a distributed SQL query engine.
+
+Using Spark SQL it is possible to do the transformation using the SQL
+
+Helps data analyst and data people to take advantage to spark without knowing it much.
