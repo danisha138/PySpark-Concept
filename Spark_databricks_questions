@@ -79,7 +79,6 @@ df.printSchema()
 
 
 Q15. What is Spark SQL?
-
 Ans: Spark SQL is a Spark module for structured data processing
 
 It provides abstraction called CataFrames and can also act as a distributed SQL query engine.
@@ -87,3 +86,18 @@ It provides abstraction called CataFrames and can also act as a distributed SQL 
 Using Spark SQL it is possible to do the transformation using the SQL
 
 Helps data analyst and data people to take advantage to spark without knowing it much.
+
+
+
+Q16. How to create temporary views?
+Ans: To apply operations on dataframe in the SQL manner, temporary view can be created.
+
+Use function createOrReplaceTempView("view_name") on dataframe.
+createTempView("view_name")
+
+Example:
+df.createOrReplace TempView("Customer")
+spark.sql("select * from Customer").show()
+
+TEMPORARY views are session-scoped and is dropped when session ends 
+because it skips persisting the definition in the underlying metastore, if any
