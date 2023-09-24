@@ -126,3 +126,11 @@ command within the specific cell.
 %md: To convert specific cell as markdown cell. To add the static text content.
 
 %run: To run the one notebook from inside the other notebook.
+
+
+Q20. How would you call a notebook from another notebook?
+Ans: You can call a notebook from an another notebook using the %run command.
+
+Example could be to define helper functions in one notebook that are used by other notebooks.
+
+%run must be in a cell by itself, because it runs the entire notebook inline.
