@@ -1,0 +1,5 @@
+Apache spark is best for:
+● structured -> with DataFrames
+● un-structured -> with RDDs
+● semi-structured -> with DF and RDDs
+● real-time -> with Spark/Structured Streaming
