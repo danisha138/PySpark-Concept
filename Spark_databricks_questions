@@ -30,39 +30,18 @@ Declarative Manner: In this approach we can define the schema of the dataframe i
 
 #Define schema progarmatically
 
-2 3 from pyspark.sql.types import
+from pyspark.sql.types import
 
-orderSchema = StructType([StructField("Region", StringType ,StructField("Country", StringType(),True) 4
-
+orderSchema = StructType([StructField("Region", StringType ,StructField("Country", StringType(),True) 
 ,StructField("ItemType", StringType(),True)
-
-5 6 ,StructField("SalesChannel", StringType(), True)
-
-7 , StructField("OrderPriority", StringType(), True)
-
-8 9 ,StructField("OrderID", Integer Type(), True) ,StructField("Units Sold", Integer Type(), True)
-
-10 , StructField("UnitPrice", DoubleType(),True)
-
-11 , StructField("UnitCost", DoubleType(), True)
-
-13
-
-12 ,StructField("TotalRevenue", DoubleType(), True) ,StructField("TotalCost", DoubleType(), True)
-
-14
-
-15
-
-16
-
-17
-
-18
+,StructField("SalesChannel", StringType(), True)
+, StructField("OrderPriority", StringType(), True)
+,StructField("OrderID", Integer Type(), True) ,StructField("Units Sold", Integer Type(), True)
+, StructField("UnitPrice", DoubleType(),True), StructField("UnitCost", DoubleType(), True)
+,StructField("TotalRevenue", DoubleType(), True) ,StructField("TotalCost", DoubleType(), True)
 
 df = spark. read. load ("/FileStore/tables/Order.csv", format="csv" header-True, schema-orderSchema)
 
-19
 
 df.printSchema()
 
@@ -86,7 +65,6 @@ It provides abstraction called CataFrames and can also act as a distributed SQL 
 Using Spark SQL it is possible to do the transformation using the SQL
 
 Helps data analyst and data people to take advantage to spark without knowing it much.
-
 
 
 Q16. How to create temporary views?
